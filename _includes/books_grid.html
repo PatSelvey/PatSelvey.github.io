@@ -1,0 +1,27 @@
+        <!-- Books Grid Section -->
+        <section class="page-section bg-light" id="books">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">EBooks</h2>
+                    <h3 class="section-subheading text-muted">Freely downloadable versions of my books.</h3>
+                </div>
+                <div class="row">
+                    {% for book in site.books %}
+                    <div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="portfolio-item">
+                            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal{{ book.name }}">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                                </div>
+                                <img class="img-fluid" src="assets/books/{{ book.thumbnail }}" alt="{{book.title}}" />
+                            </a>
+                            <div class="portfolio-caption">
+                                <div class="portfolio-caption-heading">{{ book.title }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{{ book.subtitle }}</div>
+                                <div class="portfolio-caption-subheading text-muted"><a href="/assets/books/{{book.asset}}">Download</a></div>
+                            </div>
+                        </div>
+                    </div>{% endfor %}
+                </div>
+            </div>
+        </section>

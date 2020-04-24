@@ -1,0 +1,28 @@
+url: https://PatSelvey.github.io
+baseurl: ""
+
+# Site settings
+email: PatSelvey@gmail.com
+title: Pat Selvey
+subtitle: "Teaching Materials"
+description: "Your source for Pat Selvey's eBooks, videos and more."
+
+collections:
+  books:
+    output: false
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: twitter
+    url: https://twitter.com/patselvey
+  - title: github
+    url: http://github.com/PatSelvey
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: PO Box 17228
+  - line: Winston Salem, NC 27116
+
+# Build settings
+markdown: kramdown
+permalink: pretty
