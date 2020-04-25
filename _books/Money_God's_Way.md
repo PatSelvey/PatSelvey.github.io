@@ -10,5 +10,5 @@ description: The purpose of "MONEY God's Way" is to help you understand finances
 
 image: MoneyGodsWay.png
 thumbnail: MoneyGodsWay-thumbnail.png
-asset: Money_Gods_Way.epub
+asset: MoneyGodsWay.epub
 ---
