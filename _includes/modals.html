@@ -1,7 +1,7 @@
  <!-- Books Modal -->
  {% for book in site.books %}
-        <div class="portfolio-modal modal fade" id="#portfolioModal{{ book.name }}" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog">
+        <div class="portfolio-modal modal fade" id="portfolioModal{{ book.name }}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="close-modal" data-dismiss="modal"><img src="/assets/img/close-icon.svg" /></div>
                     <div class="container">
@@ -16,7 +16,7 @@
                                     <ul class="list-inline">
                                         <li>Date: {{ book.release-date }}</li>
                                         <li>Client: Threads</li>
-                                        <strong><a href="/assets/books/{{book.asset}}">{{ book.category }}</a></strong>
+                                        <strong><a href="/assets/books/{{book.asset}}">Download {{ book.category }}</a></strong>
                                     </ul>
                                     <button class="btn btn-primary" data-dismiss="modal" type="button"><i
                                             class="fas fa-times mr-1"></i>Close</button>
