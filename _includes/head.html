@@ -3,6 +3,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="{{site.description}}" />
     <meta name="author" content="{{site.author}}" />
+    <meta property="og:title" content="Pat Selvey" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://PatSelvey.org" />
+    <meta property="og:image" content="/assets/img/header-bg.jpg" />
+    <meta property="og:locale" content="en_US" />
+
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">

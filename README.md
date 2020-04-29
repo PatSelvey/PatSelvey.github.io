@@ -6,7 +6,7 @@ The theme is based on the [Agency Jekyll theme]() based on the [Agency bootstrap
 
 ## Serve locally
 
-    docker run --rm -it -v "$PWD`:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle"
+    docker run --rm -it -v "$PWD`:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 jekyll/jekyll:latest jekyll serve
 
 # Resources
 
