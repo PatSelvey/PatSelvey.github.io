@@ -1,28 +1,25 @@
  <!-- Books Modal -->
  {% for book in site.books %}
-        <div class="portfolio-modal modal fade" id="portfolioModal{{ book.name }}" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div class="modal" id="portfolioModal{{ book.name }}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable"> <!-- modal-fullscreen modal-dialog-scrollable -->
                 <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal"><img src="/assets/img/close-icon.svg" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here-->
-                                    <h2 class="text-uppercase">{{ book.title }}</h2>
-                                    <p class="item-intro text-muted">{{ book.subtitle }}</p>
-                                    <a href="/assets/books/{{book.asset}}"><img class="img-fluid d-block mx-auto" src="/assets/books/{{ book.image }}" alt="{{ book.title }}" /></a>
-                                    <p>{{ book.description }}</p>
-                                    <ul class="list-inline">
-                                        <li>Date: {{ book.release-date }}</li>
-                                        <li>Client: Threads</li>
-                                        <strong><a href="/assets/books/{{book.asset}}">Download {{ book.category }}</a></strong>
-                                    </ul>
-                                    <button class="btn btn-primary" data-dismiss="modal" type="button"><i
-                                            class="fas fa-times mr-1"></i>Close</button>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="modal-header">
+                        <strong class="modal-title">{{ book.title }}</strong> &nbsp; <span class="item-intro text-muted">({{ book.subtitle }})</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Project Details Go Here-->
+                        <!-- <h2 class="text-uppercase">{{ book.title }}</h2> -->
+                        <!-- <p class="item-intro text-muted">{{ book.subtitle }}</p> -->
+                        <a href="/assets/books/{{book.asset}}"><img class="img-fluid d-block mx-auto" src="/assets/books/{{ book.image }}" alt="{{ book.title }} (click to download)" /></a>
+                        <p>{{ book.description }}</p>
+                        <ul class="list-inline">
+                            <li>Date: {{ book.release-date }}</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <strong><a class="btn btn-primary" href="/assets/books/{{book.asset}}" role="button">Download {{ book.category }}</a></strong>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
