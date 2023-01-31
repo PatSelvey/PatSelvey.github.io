@@ -1,4 +1,8 @@
+# gh-pages output
 _site
+
+# Ruby stuff
+vendor/
 
 # Windows image file caches
 Thumbs.db
@@ -35,5 +39,3 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-
-vendor/

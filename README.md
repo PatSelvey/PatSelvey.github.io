@@ -2,11 +2,18 @@
 
 This is my personal website with my teaching resources, books and more.
 
-The theme is based on the [Agency Jekyll theme]() based on the [Agency bootstrap theme ](https://startbootstrap.com/template-overviews/agency/)
+The theme is based on the [Agency bootstrap theme](https://startbootstrap.com/theme/agency)
+
+To update that, just copy in the new "dist" files (just the css and js).
 
 ## Serve locally
 
-    docker run --rm -it -v "$PWD`:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 jekyll/jekyll:latest jekyll serve
+Use the devcontainer and run `bundle exec jekyll serve`
+
+```powershell
+docker build -t jekyll .devcontainer
+docker run --rm -it -v "$PWD`:/srv/jekyll" -v "$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 -d jekyll bundle exec jekyll serve
+```
 
 # Resources
 
