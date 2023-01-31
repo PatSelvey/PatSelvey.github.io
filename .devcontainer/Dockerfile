@@ -11,4 +11,4 @@ RUN apk update \
 && gem update bundler
 
 # RUN bundle install --quiet --clean
-# CMD ["jekyll", "serve"]
+# CMD ["bundle","exec","jekyll","serve"]
