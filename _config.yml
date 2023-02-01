@@ -10,6 +10,8 @@ description: "Your source for Pat Selvey's eBooks, videos and more."
 collections:
   books:
     output: false
+  videos:
+    output: false
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:

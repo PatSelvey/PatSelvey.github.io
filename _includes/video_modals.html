@@ -1,0 +1,25 @@
+ <!-- Books Modal -->
+ {% for video in site.videos %}
+        <div class="modal" id="videoModal{{ video.name }}" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg"> <!-- modal-fullscreen modal-dialog-scrollable -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <strong class="modal-title">{{ video.title }}</strong> &nbsp; <span class="item-intro text-muted">{{ video.subtitle }}</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Project Details Go Here-->
+                        <!-- <h2 class="text-uppercase">{{ video.title }}</h2> -->
+                        <!-- <p class="item-intro text-muted">{{ video.subtitle }}</p> -->
+                        <div class="ratio ratio-16x9">
+                        <iframe src="https://www.youtube-nocookie.com/embed/{{ video.ytid }}" title="{{video.title}} on YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a class="btn btn-primary" href="https://www.youtube.com/watch?v={{video.ytid}}" target="_blank" role="button">Watch on YouTube</a>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endfor %}
