@@ -1,10 +1,10 @@
  <!-- Books Modal -->
  {% for book in site.books %}
-        <div class="modal" id="portfolioModal{{ book.name }}" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal" id="bookModal{{ book.name }}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable"> <!-- modal-fullscreen modal-dialog-scrollable -->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <strong class="modal-title">{{ book.title }}</strong> &nbsp; <span class="item-intro text-muted">({{ book.subtitle }})</span>
+                        <strong class="modal-title">{{ book.title }}</strong> &nbsp; <span class="item-intro text-muted">{{ book.subtitle }}</span>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -18,7 +18,11 @@
                         </ul>
                     </div>
                     <div class="modal-footer">
-                        <strong><a class="btn btn-primary" href="/assets/books/{{book.asset}}" role="button">Download {{ book.category }}</a></strong>
+                        {% if book.asset %}
+                        <a class="btn btn-primary" href="/assets/books/{{book.asset}}" role="button">Download {{ book.category }}</a>
+                        {% else %}
+                        Coming Soon
+                        {% endif %}
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>

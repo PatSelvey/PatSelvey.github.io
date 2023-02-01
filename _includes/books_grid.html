@@ -6,10 +6,10 @@
                     <h3 class="section-subheading text-muted">Freely downloadable versions of my books.</h3>
                 </div>
                 <div class="row gy-5">
-                    {% for book in site.books %}
+                    {% for book in site.books | sort: "date" %}
                     <div class="col-lg-3 col-sm-4 col-6 mb-4 gx-5">
                         <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#portfolioModal{{ book.name }}" href="#portfolioModal{{ book.name }}">
+                            <a class="portfolio-link" data-bs-toggle="modal" data-bs-target="#bookModal{{ book.name }}" href="#bookModal{{ book.name }}">
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-info-circle fa-3x"></i></div>
                                 </div>
@@ -17,11 +17,12 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">{{ book.title }}</div>
-                                <div class="portfolio-caption-subheading text-muted">{{ book.subtitle }}</div>
-                                <div class="portfolio-caption-subheading text-muted"><a href="/assets/books/{{book.asset}}">Download</a></div>
+                                <div class="portfolio-caption-subheading">{{ book.subtitle }}</div>
+                                <div class="portfolio-caption-subheading text-muted">{% if book.asset %}<a href="/assets/books/{{book.asset}}">Download</a>{% else %}Coming Soon{% endif %}</div>
                             </div>
                         </div>
-                    </div>{% endfor %}
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
